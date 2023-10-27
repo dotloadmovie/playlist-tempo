@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "playlist-tempo"
+version = "0.1.0"
+description = ""
+authors = ["Dave Tickle <dave@dotloadmovie.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "playlist_tempo"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytest = "^7.4.3"
+pytest-watch = "^4.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
