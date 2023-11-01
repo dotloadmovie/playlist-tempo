@@ -1,0 +1,7 @@
+{
+  "token": {
+    "access_token": "helloworld",
+    "token_type": "Bearer",
+    "expires_in": 3600
+  }
+}

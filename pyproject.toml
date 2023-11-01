@@ -11,6 +11,8 @@ packages = [{include = "playlist_tempo"}]
 python = "^3.8"
 pytest = "^7.4.3"
 pytest-watch = "^4.2.0"
+requests = "^2.31.0"
+requests-mock = "^1.11.0"
 
 
 [build-system]
