@@ -14,4 +14,4 @@ def test_get_playlist_track_ids(**kwargs):
 
     tracks = get_playlist_track_ids(playlist_id="helloworld", token="helloworld")
 
-    assert tracks == ["helloworld"]
+    assert tracks == ["hello", "world"]

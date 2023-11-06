@@ -140,7 +140,114 @@
               "spotify": "string"
             },
             "href": "string",
-            "id": "helloworld",
+            "id": "hello",
+            "is_playable": false,
+            "linked_from": {},
+            "restrictions": {
+              "reason": "string"
+            },
+            "name": "string",
+            "popularity": 0,
+            "preview_url": "string",
+            "track_number": 0,
+            "type": "track",
+            "uri": "string",
+            "is_local": false
+          }
+        },
+        {
+          "added_at": "string",
+          "added_by": {
+            "external_urls": {
+              "spotify": "string"
+            },
+            "followers": {
+              "href": "string",
+              "total": 0
+            },
+            "href": "string",
+            "id": "string",
+            "type": "user",
+            "uri": "string"
+          },
+          "is_local": false,
+          "track": {
+            "album": {
+              "album_type": "compilation",
+              "total_tracks": 9,
+              "available_markets": ["CA", "BR", "IT"],
+              "external_urls": {
+                "spotify": "string"
+              },
+              "href": "string",
+              "id": "2up3OPMp9Tb4dAKM2erWXQ",
+              "images": [
+                {
+                  "url": "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228",
+                  "height": 300,
+                  "width": 300
+                }
+              ],
+              "name": "string",
+              "release_date": "1981-12",
+              "release_date_precision": "year",
+              "restrictions": {
+                "reason": "market"
+              },
+              "type": "album",
+              "uri": "spotify:album:2up3OPMp9Tb4dAKM2erWXQ",
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "string"
+                  },
+                  "href": "string",
+                  "id": "string",
+                  "name": "string",
+                  "type": "artist",
+                  "uri": "string"
+                }
+              ]
+            },
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "string"
+                },
+                "followers": {
+                  "href": "string",
+                  "total": 0
+                },
+                "genres": ["Prog rock", "Grunge"],
+                "href": "string",
+                "id": "string",
+                "images": [
+                  {
+                    "url": "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228",
+                    "height": 300,
+                    "width": 300
+                  }
+                ],
+                "name": "string",
+                "popularity": 0,
+                "type": "artist",
+                "uri": "string"
+              }
+            ],
+            "available_markets": ["string"],
+            "disc_number": 0,
+            "duration_ms": 0,
+            "explicit": false,
+            "external_ids": {
+              "isrc": "string",
+              "ean": "string",
+              "upc": "string"
+            },
+            "external_urls": {
+              "spotify": "string"
+            },
+            "href": "string",
+            "id": "world",
             "is_playable": false,
             "linked_from": {},
             "restrictions": {
@@ -160,24 +267,46 @@
     "type": "string",
     "uri": "string"
   },
-  "track": {
-    "acousticness": 0.00242,
-    "analysis_url": "https://api.spotify.com/v1/audio-analysis/2takcwOaAZWiXQijPHIx7B",
-    "danceability": 0.585,
-    "duration_ms": 237040,
-    "energy": 0.842,
-    "id": "2takcwOaAZWiXQijPHIx7B",
-    "instrumentalness": 0.00686,
-    "key": 9,
-    "liveness": 0.0866,
-    "loudness": -5.883,
-    "mode": 0,
-    "speechiness": 0.0556,
-    "tempo": 118.211,
-    "time_signature": 4,
-    "track_href": "https://api.spotify.com/v1/tracks/2takcwOaAZWiXQijPHIx7B",
-    "type": "audio_features",
-    "uri": "spotify:track:2takcwOaAZWiXQijPHIx7B",
-    "valence": 0.428
+  "tracks": {
+    "hello": {
+      "acousticness": 0.00242,
+      "analysis_url": "https://api.spotify.com/v1/audio-analysis/2takcwOaAZWiXQijPHIx7B",
+      "danceability": 0.585,
+      "duration_ms": 237040,
+      "energy": 0.842,
+      "id": "2takcwOaAZWiXQijPHIx7B",
+      "instrumentalness": 0.00686,
+      "key": 9,
+      "liveness": 0.0866,
+      "loudness": -5.883,
+      "mode": 0,
+      "speechiness": 0.0556,
+      "tempo": 100,
+      "time_signature": 4,
+      "track_href": "https://api.spotify.com/v1/tracks/2takcwOaAZWiXQijPHIx7B",
+      "type": "audio_features",
+      "uri": "spotify:track:2takcwOaAZWiXQijPHIx7B",
+      "valence": 0.428
+    },
+    "world": {
+      "acousticness": 0.00242,
+      "analysis_url": "https://api.spotify.com/v1/audio-analysis/2takcwOaAZWiXQijPHIx7B",
+      "danceability": 0.585,
+      "duration_ms": 237040,
+      "energy": 0.842,
+      "id": "2takcwOaAZWiXQijPHIx7B",
+      "instrumentalness": 0.00686,
+      "key": 9,
+      "liveness": 0.0866,
+      "loudness": -5.883,
+      "mode": 0,
+      "speechiness": 0.0556,
+      "tempo": 200,
+      "time_signature": 4,
+      "track_href": "https://api.spotify.com/v1/tracks/2takcwOaAZWiXQijPHIx7B",
+      "type": "audio_features",
+      "uri": "spotify:track:2takcwOaAZWiXQijPHIx7B",
+      "valence": 0.428
+    }
   }
 }
