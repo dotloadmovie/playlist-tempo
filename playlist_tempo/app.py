@@ -15,6 +15,3 @@ def average_tempo(playlist_id):
     tempos = list(map(get_tempo, ids))
 
     return reduce(lambda curr, next: curr + next, tempos) / len(tempos)
-
-
-print(average_tempo("6ki1klxQw81KOcT4J7bSYy"))
