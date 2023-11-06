@@ -10,8 +10,10 @@ def test_get_playlist_track_ids(**kwargs):
     file = open("./fakes/data.json")
     json_body = json.load(file)
 
-    kwargs["mock"].get(f"{BASE_URL}/playlist", json=json_body["playlist"])
+    kwargs["mock"].get(
+        f"{BASE_URL}/playlists/helloworld", json=json_body["playlists"][0]
+    )
 
     tracks = get_playlist_track_ids(playlist_id="helloworld", token="helloworld")
 
-    assert tracks == ["helloworld"]
+    assert tracks == ["hello", "world"]

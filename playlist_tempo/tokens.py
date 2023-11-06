@@ -3,6 +3,7 @@ import os
 import requests
 from playlist_tempo.utils.base64 import encode
 from playlist_tempo.config.paths import BASE_URL
+from playlist_tempo.config.env import LIVE
 
 
 def create_token():
@@ -13,10 +14,17 @@ def create_token():
 
     key = encode(raw)
 
-    headers = {"Authorization": "Basic " + key}
+    headers = {
+        "Authorization": "Basic " + key,
+        "Content-Type": " application/x-www-form-urlencoded",
+    }
+    data = {"grant_type": "client_credentials"}
 
-    response = requests.get(
-        BASE_URL + "/token",
-    )
+    if LIVE == True:
+        response = requests.post(BASE_URL + "/token", headers=headers, data=data)
+    else:
+        response = requests.get(
+            BASE_URL + "/token",
+        )
 
     return response.json()

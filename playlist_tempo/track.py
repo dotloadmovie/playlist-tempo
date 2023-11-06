@@ -6,7 +6,7 @@ from playlist_tempo.config.paths import BASE_URL
 def get_track_tempo(track_id, token):
     headers = {"Authorization": "Bearer: %s" % (token)}
 
-    response = requests.get(BASE_URL + "/track", headers=headers)
+    response = requests.get(BASE_URL + "/audio-features/" + track_id, headers=headers)
 
     track = response.json()
 
