@@ -15,3 +15,13 @@ def average_tempo(playlist_id):
     tempos = list(map(get_tempo, ids))
 
     return reduce(lambda curr, next: curr + next, tempos) / len(tempos)
+
+
+def all_tempos(playlist_id):
+    token = create_token()
+    ids = get_playlist_track_ids(playlist_id, token["access_token"])
+
+    def get_tempo(id):
+        return get_track_tempo(id, token["access_token"])
+
+    return list(map(get_tempo, ids))

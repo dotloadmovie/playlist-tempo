@@ -1,7 +1,8 @@
 import pytest
 import requests_mock
 import json
-from playlist_tempo.config.paths import BASE_URL
+from playlist_tempo.config.paths import AUTH_URL
+from playlist_tempo.config.env import LIVE
 
 from playlist_tempo.tokens import create_token
 
@@ -11,7 +12,11 @@ def test_create_token(**kwargs):
     file = open("./fakes/data.json")
     json_body = json.load(file)
 
-    kwargs["mock"].get(f"{BASE_URL}/token", json=json_body["token"])
+    if LIVE == True:
+        kwargs["mock"].post(f"{AUTH_URL}/token", json=json_body["token"])
+
+    else:
+        kwargs["mock"].get(f"{AUTH_URL}/token", json=json_body["token"])
 
     response = create_token()
 
