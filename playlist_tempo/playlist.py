@@ -4,7 +4,7 @@ from playlist_tempo.config.paths import BASE_URL
 
 
 def get_playlist_track_ids(playlist_id, token):
-    headers = {"Authorization": "Bearer: %s" % (token)}
+    headers = {"Authorization": "Bearer %s" % (token)}
 
     response = requests.get(BASE_URL + "/playlists/" + playlist_id, headers=headers)
 
