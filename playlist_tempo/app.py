@@ -22,6 +22,6 @@ def all_tempos(playlist_id):
     ids = get_playlist_track_ids(playlist_id, token["access_token"])
 
     def get_tempo(id):
-        return get_track_tempo(id, token["access_token"])
+        return round(get_track_tempo(id, token["access_token"]), 0)
 
     return list(map(get_tempo, ids))
