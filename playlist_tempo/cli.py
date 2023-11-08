@@ -1,4 +1,6 @@
 import click as click
+import asciichartpy as acp
+
 from playlist_tempo.app import average_tempo, all_tempos
 
 
@@ -18,3 +20,12 @@ def calculate_tempo(playlist):
 @click.option("--playlist", "-p")
 def get_all_tempos(playlist):
     print(all_tempos(playlist))
+
+
+@tempo.command()
+@click.option("--playlist", "-p")
+def plot_tempos(playlist):
+    y = all_tempos(playlist)
+    x = range(len(y))
+
+    print(acp.plot(y, {"height": 20}))
